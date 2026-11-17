@@ -1,3 +1,4 @@
+import renderImage from "./Render/Image.js"
 import DrawStraightLine from "./Render/StraightLine.js"
 
 let screen
@@ -17,9 +18,12 @@ function start() {
 }
 
 function update() {
-    ctx.fillStyle = 'cornflowerblue'
-    ctx.fillRect(0, 0, screen.width, screen.height)
     requestAnimationFrame(update)
 
+    ctx.fillStyle = 'cornflowerblue'
+    ctx.fillRect(0, 0, screen.width, screen.height)
+
     DrawStraightLine(ctx, { x: 0, y: 0 }, { x: 1000, y: 500 })
+
+    renderImage(ctx, './Assets/bobby.jpg', 500, 100, 64, 64)
 }
