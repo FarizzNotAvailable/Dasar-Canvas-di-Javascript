@@ -1,3 +1,5 @@
+import DrawStraightLine from "./Render/StraightLine.js"
+
 let screen
 let ctx
 
@@ -18,4 +20,6 @@ function update() {
     ctx.fillStyle = 'cornflowerblue'
     ctx.fillRect(0, 0, screen.width, screen.height)
     requestAnimationFrame(update)
+
+    DrawStraightLine(ctx, { x: 0, y: 0 }, { x: 1000, y: 500 })
 }
